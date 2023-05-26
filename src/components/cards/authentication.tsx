@@ -19,7 +19,12 @@ const CreateAccount = ()=>{
     const {data:session} = useSession();
 
     if(session){
-        return<></>;
+        return<>
+          <Button variant="outline" onClick={()=>signOut()}>
+            <Icons.user className="mr-2 h-4 w-4" />
+            Log Out
+          </Button>
+        </>;
     }
 
   return (
